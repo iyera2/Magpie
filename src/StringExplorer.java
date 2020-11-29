@@ -20,6 +20,9 @@ public class StringExplorer {
 
 		// Try other methods here:
 
+		int notFoundPsn = sample.indexOf("slow", 5); // second parameter is index to start search.
+		System.out.println("sample.indexOf(\"slow\")\t" + notFoundPsn);
 	}
 
+}
 }
