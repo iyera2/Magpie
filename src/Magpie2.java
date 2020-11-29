@@ -30,15 +30,29 @@ public class Magpie2 {
 	 * @return a response based on the rules given
 	 */
 	public String getResponse(String statement) {
+		// place higher priority responses higher on the list of responses
 		String response = "";
-		if (statement.indexOf("no") >= 0) {
+		if (statement.trim().length() <= 0) {
+			response = "Say something, please";
+		} else if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
 		} else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else {
+		} else if (statement.contains("dog") || statement.contains("cat")) {
+			response = "Tell me more about your pets.";
+		} else if (statement.contains("Mr. Padjen")) {
+			response = "He sounds like a good teacher.";
+		} else if (statement.contains("how")) {
+			response = "Through a variety of tasks.";
+		} else if (statement.contains("what")) {
+			response = "I cannot identify that.";
+		} else if (statement.contains("when")) {
+			response = "Time is relative";
+		}
+		else {
 			response = getRandomResponse();
 		}
 		return response;

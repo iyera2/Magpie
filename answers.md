@@ -1,0 +1,2 @@
+# Excerise 2
+1. When a keyword is inside of another word, such as "know" including "no," it will recognize the keyword "no" and give the response assigned to that, which is a problem as that is likely not what the user would expect.
